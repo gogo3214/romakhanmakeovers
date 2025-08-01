@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roma Khan Makeovers</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background: #000;
+    }
+
+    video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .video-section {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: gold;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .overlay-text {
+      z-index: 2;
+      max-width: 90%;
+      animation: fadeIn 2s ease-in-out;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .overlay-text h1, .overlay-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .overlay-text p {
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: gold;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: white;
+    }
+
+    /* Floating Buttons */
+    .floating-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-icons a {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      animation: sparkle 2s infinite ease-in-out;
+    }
+
+    .floating-icons .whatsapp {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/124/124034.png');
+    }
+
+    .floating-icons .instagram {
+      background-image: url('https://cdn-icons-png.flaticon.com/512/174/174855.png');
+    }
+
+    @keyframes sparkle {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 10px gold; }
+      50% { transform: scale(1.1); box-shadow: 0 0 20px #fff; }
+    }
+
+    @media (max-width: 768px) {
+      .overlay-text h1, .overlay-text h2 {
+        font-size: 1.8rem;
+      }
+      .overlay-text p {
+        font-size: 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating Icons -->
+<div class="floating-icons">
+  <a href="https://wa.me/919989556147" target="_blank" class="whatsapp"></a>
+  <a href="https://instagram.com/romakhan_makeovers" target="_blank" class="instagram"></a>
+</div>
+
+<!-- Navbar -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- Sections -->
+
+<section id="roma" class="video-section">
+  <video autoplay muted loop>
+    <source src="romainto.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h1>Roma Khan Makeovers</h1>
+    <p>Certified Celebrity Makeup Artist</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="manara.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h2>Manara</h2>
+    <p>Styled by Roma Khan for her elegant bridal appearance.</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="iba.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h2>Iba Khan</h2>
+    <p>A graceful transformation with Roma Khan’s artistry.</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="sneha.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h2>Sneha</h2>
+    <p>Sneha’s radiant party makeover by Roma Khan.</p>
+  </div>
+</section>
+
+<section class="video-section">
+  <video autoplay muted loop>
+    <source src="amiksha.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h2>Amiksha</h2>
+    <p>Amiksha’s bold and beautiful bridal look styled by Roma.</p>
+  </div>
+</section>
+
+<section class="video-section" id="about">
+  <video autoplay muted loop>
+    <source src="behind the scenes.mp4" type="video/mp4">
+  </video>
+  <div class="overlay-text">
+    <h2>Behind the Scenes</h2>
+    <p>A glimpse into the magic of Roma Khan’s makeup sessions.</p>
+  </div>
+</section>
+
+</body>
+</html>
